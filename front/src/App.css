@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+  height: 100%;
+}
+
+.edit-cards {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
