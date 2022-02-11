@@ -15,8 +15,14 @@ const style={
     fontSize: "14px"
 };
 
-const handleSelect = () => {
-    console.log(window.getSelection().toString());
+
+
+const handleClick = (tag) => {
+    let text = window.getSelection().toString();
+
+    let closeTag = [tag.slice(0, 1), '/', tag.slice(1)].join('');
+    let result = [tag, text, closeTag].join('');
+    console.log(result);
 }
 
 const Header = () => {
@@ -28,7 +34,7 @@ const Header = () => {
                     {
                         Object.keys(tags).map(element => {
                             return (
-                                <Button as={Col}  key={tags[element]} style={style} onClick={handleSelect}>
+                                <Button as={Col}  key={tags[element]} style={style} onClick={() => handleClick(tags[element])}>
                                     {tags[element]}
                                 </Button>
                             )

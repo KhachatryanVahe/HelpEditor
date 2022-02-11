@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <Header/>
       <div className='edit-cards'>
-        <EditCard/>
-        <EditCard/>
+        <EditCard id={'first'}/>
+        <EditCard id={'second'}/>
       </div>
     </div>
   );

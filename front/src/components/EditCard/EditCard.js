@@ -47,7 +47,7 @@ const useStyles = makeStyles({
 })
 
 
-const EditCard = () => {
+const EditCard = (props) => {
     const classes = useStyles();
     const { height, width } = useWindowDimensions();
     return(
@@ -56,9 +56,9 @@ const EditCard = () => {
             className={classes.card}
         >
             <TextField
+                id={props.id}
                 className={classes.inputArea}
                 InputProps = {{className: classes.inputAreaProps}}
-
                 multiline
                 minRows={height / 32}
                 maxRows={height / 32}
