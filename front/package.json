@@ -1,7 +1,11 @@
 {
-  "name": "front",
+  "name": "help-editor",
   "version": "0.1.0",
   "private": true,
+  "author": {
+     "name": "Vahe Khachatryan",
+     "email": "vahe.khachatryan.1999@gmail.com"
+   },
   "dependencies": {
     "draftjs-to-html": "^0.9.1",
     "electron-is-dev": "^2.0.0",
@@ -20,15 +24,29 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron": "electron .",
-    "electron-dev": "concurrently \"BROWSER=none npm start\" && \"npm electron\""
+    "electron-dev": "concurrently \"BROWSER=none npm start\" \"electron .\"",
+    "build-electron": "electron-builder --linux"
   },
-  "main": "public/main.js",
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "main": "public/electron.js",
+  "homepage": "./",
+  "build": {
+    "appId": "my.id",
+    "productName": "Help editor",
+    "asar": false,
+    "directories": {
+      "buildResources": "build",
+      "output": "release"
+    },
+    "win": {
+      "target": "portable"
+    },
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "category": "Utility",
+      "icon": "public/favicon.png"
+    }
   },
   "browserslist": {
     "production": [

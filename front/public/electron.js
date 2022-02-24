@@ -13,7 +13,7 @@ function createWindow () {
     webPreferences: {
       nodeIntegration: true
     },
-    icon: __dirname + './favicon.ico'
+    icon: __dirname + './favicon.png'
   })
   let HOST = process.env.HOST || "localhost"
   let PORT = process.env.PORT || 3001
