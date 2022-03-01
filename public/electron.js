@@ -1,7 +1,8 @@
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, Menu} = require('electron')
 const path = require('path');
 const url = require('url');
 const isDev = require('electron-is-dev');
+const menu = require('./applicationMenu')
 
 let mainWindow;
 
@@ -13,7 +14,7 @@ function createWindow () {
     webPreferences: {
       nodeIntegration: true
     },
-    icon: __dirname + './favicon.png'
+    icon: __dirname + '\\favicon.ico'
   })
   let HOST = process.env.HOST || "localhost"
   let PORT = process.env.PORT || 3001
@@ -26,6 +27,7 @@ function createWindow () {
   })
 }
 
+Menu.setApplicationMenu(menu)
 app.on('ready', createWindow)
 
 app.on('resize', function(e,x,y){

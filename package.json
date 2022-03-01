@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "author": {
-     "name": "Vahe Khachatryan",
-     "email": "vahe.khachatryan.1999@gmail.com"
-   },
+    "name": "Vahe Khachatryan",
+    "email": "vahe.khachatryan.1999@gmail.com"
+  },
   "dependencies": {
     "draftjs-to-html": "^0.9.1",
     "electron-is-dev": "^2.0.0",
@@ -16,11 +16,11 @@
   },
   "devDependencies": {
     "concurrently": "^7.0.0",
-    "electron": "^17.0.1",
+    "electron": "^17.1.0",
     "electron-builder": "^22.14.13"
   },
   "scripts": {
-    "start": "PORT=3001 react-scripts start",
+    "start": "set PORT=3001 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -45,7 +45,7 @@
         "deb"
       ],
       "category": "Utility",
-      "icon": "public/favicon.png"
+      "icon": "public/favicon.ico"
     }
   },
   "browserslist": {
