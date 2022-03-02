@@ -12,7 +12,8 @@ function createWindow () {
     height: 600,
     title:'Help editor',
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      contextIsolation: false
     },
     icon: __dirname + '\\favicon.ico'
   })

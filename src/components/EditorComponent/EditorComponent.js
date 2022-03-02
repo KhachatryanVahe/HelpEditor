@@ -6,7 +6,7 @@ import htmlToDraft from 'html-to-draftjs';
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import "./EditorComponent.css"
 
-const { ipcRenderer } = window.require("electron");
+const { ipcRenderer } = window.require('electron');
 
 const toolbar = {
   options: ['history', 'inline', 'blockType', 'fontFamily', 'list', 'textAlign', 'colorPicker', 'link'],
@@ -27,13 +27,12 @@ export function EditorConvertToHTML (props) {
   const onEditorStateChange = (editorState) => {
     setState(editorState);
   };
-  const value = draftToHtml(convertToRaw(state.getCurrentContent()))
-  ipcRenderer.on('save-as', (event, data) => {
-    console.log('data = ', data);
-    if(data) {
-      event.returnValue = value
-    }
+  let value = draftToHtml(convertToRaw(state.getCurrentContent()))
+
+  ipcRenderer.on('save-file', (event, arg) => {
+    console.log('arg = ', arg);
   })
+
   return (
     <div className={'editor'}>
       <Editor
@@ -46,6 +45,7 @@ export function EditorConvertToHTML (props) {
       />
       <textarea
         className={'html-area'}
+        readOnly={true}
         // disabled
         value={value}//draftToHtml(convertToRaw(state.getCurrentContent()))}
       />

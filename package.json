@@ -27,7 +27,7 @@
     "electron-dev": "concurrently \"BROWSER=none npm start\" \"electron .\"",
     "build-electron": "electron-builder --linux"
   },
-  "main": "public/electron.js",
+  "main": "electron.js",
   "homepage": "./",
   "build": {
     "appId": "my.id",
