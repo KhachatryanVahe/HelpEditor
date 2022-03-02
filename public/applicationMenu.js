@@ -14,7 +14,7 @@ const template = [
                 label: 'New File',
                 accelerator: 'CommandOrControl+N',
                 click() {
-                //   mainProcess.createWindow();
+                  mainWindow.createWindow();
                 }
             },
             {
@@ -28,7 +28,7 @@ const template = [
                 label: 'Save file',
                 accelerator: 'CommandOrControl+S',
                 click: (a) => {
-                    ipcMain.on('s', (event) => {
+                    ipcMain.on('save-file', (event) => {
                         event.sender.send('save-file', true)
 
                         // dialog.showSaveDialog({

@@ -1,4 +1,4 @@
-const {app, BrowserWindow, Menu} = require('electron')
+const {app, BrowserWindow, Menu, ipcMain} = require('electron')
 const path = require('path');
 const url = require('url');
 const isDev = require('electron-is-dev');
@@ -24,12 +24,21 @@ function createWindow () {
     `file://${path.join(__dirname, '../build/index.html')}`
   )
   mainWindow.on('closed', function () {
-    mainWindow = null
+    app.quit();
   })
 }
 
-Menu.setApplicationMenu(menu)
-app.on('ready', createWindow)
+ipcMain.on('save-file', (event, arg) => {
+  console.log('==== ', arg);
+
+  // Synchronous event emmision
+  event.returnValue = 'sync pong'
+})
+
+app.on('ready', () => {
+  Menu.setApplicationMenu(menu);
+  createWindow();
+})
 
 app.on('resize', function(e,x,y){
   mainWindow.setSize(x, y);
