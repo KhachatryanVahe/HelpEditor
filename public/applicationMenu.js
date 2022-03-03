@@ -1,10 +1,7 @@
 const {
-    Menu,
-    ipcMain,
-    dialog
+    BrowserWindow,
+    Menu
 } = require('electron')
-const path = require('path');
-const fs = require('fs');
 
 const template = [
     {
@@ -27,37 +24,9 @@ const template = [
             {
                 label: 'Save file',
                 accelerator: 'CommandOrControl+S',
-                click: (a) => {
-                    ipcMain.on('save-file', (event) => {
-                        event.sender.send('save-file', true)
-
-                        // dialog.showSaveDialog({
-                        //     title: 'Select the File Path to save',
-                        //     defaultPath: path.join(__dirname, 'assets/sample.html'),
-                        //     // defaultPath: path.join(__dirname, '../assets/'),
-                        //     buttonLabel: 'Save',
-                        //     // Restricting the user to only Text Files.
-                        //     filters: [
-                        //         {
-                        //             name: 'HTML Files',
-                        //             extensions: ['html']
-                        //         }, ],
-                        //     properties: []
-                        // }).then(file => {
-                        //     // Stating whether dialog operation was cancelled or not.
-                        //     console.log(file.canceled);
-                        //     if (!file.canceled) {
-                        //         console.log(file.filePath.toString());
-                        //         // Creating and Writing to the sample.txt file
-                        //         fs.writeFile(file.filePath.toString(), 'data', function (err) {
-                        //             if (err) throw err;
-                        //             console.log('Saved!');
-                        //         });
-                        //     }
-                        // }).catch(err => {
-                        //     console.log(err)
-                        // });
-                    })
+                click: () => {
+                    const focusedWindow = BrowserWindow.getFocusedWindow();
+                    focusedWindow.webContents.send('save-file', true)
                 }
             },
             { role: 'quit' }

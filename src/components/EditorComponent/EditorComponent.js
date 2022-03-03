@@ -29,9 +29,12 @@ export function EditorConvertToHTML (props) {
   };
   let value = draftToHtml(convertToRaw(state.getCurrentContent()))
 
-  const handleClick = () => {
-    console.log('==== ', ipcRenderer.sendSync('save-file', value));
-  }
+  ipcRenderer.on('save-file', (_, arg) => {
+    console.log('arg = ', arg);
+    if (arg) {
+      ipcRenderer.send('save-file', value)
+    }
+  })
 
   return (
     <div className={'editor'}>
@@ -43,7 +46,6 @@ export function EditorConvertToHTML (props) {
         toolbarClassName="toolbar-class"
         onEditorStateChange={onEditorStateChange}
       />
-      <button onClick={handleClick}>Button</button>
       <textarea
         className={'html-area'}
         readOnly={true}

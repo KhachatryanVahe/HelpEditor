@@ -1,5 +1,12 @@
-const {app, BrowserWindow, Menu, ipcMain} = require('electron')
+const {
+  app,
+  BrowserWindow,
+  Menu,
+  ipcMain,
+  dialog
+} = require('electron')
 const path = require('path');
+const fs = require('fs');
 const url = require('url');
 const isDev = require('electron-is-dev');
 const menu = require('./applicationMenu')
@@ -29,10 +36,8 @@ function createWindow () {
 }
 
 ipcMain.on('save-file', (event, arg) => {
-  console.log('==== ', arg);
-
-  // Synchronous event emmision
-  event.returnValue = 'sync pong'
+  console.log('arg = ', arg);
+  saveToHTML(arg)
 })
 
 app.on('ready', () => {
@@ -55,3 +60,46 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+const saveToHTML = (data) => {
+  const htmlText = `
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+  </head>
+  <body>
+  ${data}
+  </body>
+  </html>
+  `
+  dialog.showSaveDialog({
+    title: 'Select the File Path to save',
+    defaultPath: path.join(__dirname, '../assets/sample.html'),
+    // defaultPath: path.join(__dirname, '../assets/'),
+    buttonLabel: 'Save',
+    // Restricting the user to only Text Files.
+    filters: [
+      {
+        name: 'HTML Files',
+        extensions: ['html']
+      }, ],
+    properties: []
+  }).then(file => {
+    // Stating whether dialog operation was cancelled or not.
+    console.log(file);
+    if (!file.canceled) {
+      console.log(file.filePath.toString());
+      // Creating and Writing to the sample.txt file
+      fs.writeFile(file.filePath.toString(), htmlText, function (err) {
+        if (err) throw err;
+        console.log('Saved!');
+      });
+    }
+  }).catch(err => {
+    console.log(err)
+  });
+}
