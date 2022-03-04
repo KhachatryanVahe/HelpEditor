@@ -62,39 +62,31 @@ app.on('activate', () => {
 })
 
 const saveToHTML = (data) => {
-  const htmlText = `
-  <!DOCTYPE html>
-  <html lang="en">
+  let htmlText = `
+<!DOCTYPE html>
+<html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
   </head>
   <body>
-  ${data}
+    ${data}
   </body>
-  </html>
-  `
+</html>
+`
   dialog.showSaveDialog({
     title: 'Select the File Path to save',
     defaultPath: path.join(__dirname, '../assets/sample.html'),
-    // defaultPath: path.join(__dirname, '../assets/'),
-    buttonLabel: 'Save',
-    // Restricting the user to only Text Files.
+    buttonLabel: 'Save file',
     filters: [
-      {
-        name: 'HTML Files',
-        extensions: ['html']
-      }, ],
-    properties: []
+      {name: 'HTML Files', extensions: ['html']},
+      {name: 'All Files', extensions: ['*']}
+    ],
   }).then(file => {
-    // Stating whether dialog operation was cancelled or not.
-    console.log(file);
     if (!file.canceled) {
-      console.log(file.filePath.toString());
-      // Creating and Writing to the sample.txt file
-      fs.writeFile(file.filePath.toString(), htmlText, function (err) {
+      fs.writeFile(file.filePath, htmlText, function (err) {
         if (err) throw err;
         console.log('Saved!');
       });
