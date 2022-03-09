@@ -7,7 +7,6 @@ const {
 } = require('electron')
 const path = require('path');
 const fs = require('fs');
-const url = require('url');
 const isDev = require('electron-is-dev');
 const menu = require('./applicationMenu')
 
@@ -15,7 +14,7 @@ let mainWindow;
 
 function createWindow () {
   mainWindow = new BrowserWindow({
-    width: 1100,
+    width: 1200,
     height: 600,
     title:'Help editor',
     webPreferences: {
@@ -36,7 +35,6 @@ function createWindow () {
 }
 
 ipcMain.on('save-file', (event, arg) => {
-  console.log('arg = ', arg);
   saveToHTML(arg)
 })
 

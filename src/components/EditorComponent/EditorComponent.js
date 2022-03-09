@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { EditorState, convertToRaw, ContentState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';
-import PredefinedStringOption from '../PredefinedStringOption';
+import PredefinedStringOption from '../PredefinedString/PredefinedStringOption';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import './EditorComponent.css'
 
@@ -28,23 +28,35 @@ export function EditorConvertToHTML (props) {
   const onEditorStateChange = (editorState) => {
     setState(editorState);
   };
-  let value = draftToHtml(convertToRaw(state.getCurrentContent()))
+  let value = draftToHtml(convertToRaw(state.getCurrentContent()));
 
-  ipcRenderer.on('save-file', () => {
-    // console.log('arg = ', arg);
-    ipcRenderer.send('save-file', value)
-  })
-
-
-  ipcRenderer.once('open-file', (_, html) => {
-    console.log('html = ', html);
-    const contentBlock = htmlToDraft(html);
+  const getStringBetween = (str, start, end) => {
+    const result = str.split('<body>')[1].split('</body>')[0];
+    return result;
+  }
+  const openFile = useCallback((_, html) => {
+    const contentBlock = htmlToDraft(getStringBetween(html, '<body>', '</body>'));
     if (contentBlock) {
       const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
+      console.log('contentBlock = ', contentBlock);
       const editorState = EditorState.createWithContent(contentState);
-      setState(editorState)
+      setState(editorState);
     }
-  })
+  }, []);
+
+  const saveFile = useCallback(() => {
+    ipcRenderer.send('save-file', value)
+  }, [value]);
+
+  useEffect(() => {
+    ipcRenderer.on('save-file', saveFile);
+    ipcRenderer.once('open-file', openFile);
+
+    return () => {
+      ipcRenderer.removeListener('save-file', saveFile);
+      ipcRenderer.removeListener('open-file', openFile);
+    };
+  }, [saveFile, openFile]);
 
   return (
     <div className={'editor'}>
@@ -60,7 +72,7 @@ export function EditorConvertToHTML (props) {
       <textarea
         className={'html-area'}
         readOnly={true}
-        value={value}//draftToHtml(convertToRaw(state.getCurrentContent()))}
+        value={value}
       />
     </div>
   );
