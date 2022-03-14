@@ -18,3 +18,10 @@
     text-transform: capitalize;
     background: white;
 }
+
+.template-ul{
+    visibility: hidden;
+  }
+.template-li:hover {
+    background: #F1F1F1;
+ }

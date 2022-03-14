@@ -3,7 +3,7 @@ import { EditorState, convertToRaw, ContentState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';
-import PredefinedStringOption from '../PredefinedString/PredefinedStringOption';
+import TemplateDropdown from '../TemplateDropdown/TemplateDropdown';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import './EditorComponent.css'
 
@@ -66,7 +66,7 @@ export function EditorConvertToHTML (props) {
         wrapperClassName='wrapper-class'
         editorClassName='editor-class'
         toolbarClassName='toolbar-class'
-        toolbarCustomButtons={[<PredefinedStringOption/>]}
+        toolbarCustomButtons={[<TemplateDropdown/>]}
         onEditorStateChange={onEditorStateChange}
       />
       <textarea

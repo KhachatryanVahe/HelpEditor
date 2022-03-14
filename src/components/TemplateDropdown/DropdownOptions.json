@@ -1,0 +1,34 @@
+{
+    "dropdownOptions": [
+        {
+            "key": "template1",
+            "value": "Template 1",
+            "text": "Template 1"
+        },
+        {
+            "key": "template2",
+            "value": "Template 2",
+            "text": "Template 2"
+        },
+        {
+            "key": "template3",
+            "value": "Template 3",
+            "text": "Template 3"
+        },
+        {
+            "key": "template4",
+            "value": "Template 4",
+            "text": "Template 4"
+        },
+        {
+            "key": "template5",
+            "value": "Template 5",
+            "text": "Template 5"
+        },
+        {
+            "key": "template6",
+            "value": "Template 6",
+            "text": "Template 6"
+        }
+    ]
+}
