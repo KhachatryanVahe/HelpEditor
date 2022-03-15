@@ -2,7 +2,7 @@
     "dropdownOptions": [
         {
             "key": "template1",
-            "value": "Template 1",
+            "value": "<h1><strong>Template 1</strong></h1>",
             "text": "Template 1"
         },
         {

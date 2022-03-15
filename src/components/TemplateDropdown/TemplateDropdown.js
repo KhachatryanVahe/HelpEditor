@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import { EditorState, Modifier } from 'draft-js';
+import { EditorState, Modifier, ContentState} from 'draft-js';
+import htmlToDraft from 'html-to-draftjs';
 import dropdownOption from "./DropdownOptions.json"
 import './TemplateDropdown.css'
 
@@ -7,13 +8,18 @@ const TemplateDropdown = ({onChange, editorState}) => {
   const [open, setOpen] = useState(false);
 
   const addTemplate = (template) => {
-    const contentState = Modifier.replaceText(
+    const block = ContentState.createFromBlockArray(htmlToDraft(template).contentBlocks).getBlockMap();
+    const pastedBlocks = ContentState.createFromText(template).blockMap;
+
+    console.log('block = ', block);
+    console.log('pastedBlocks = ', pastedBlocks);
+    const contentState = Modifier.replaceWithFragment(
       editorState.getCurrentContent(),
       editorState.getSelection(),
-      template,
-      editorState.getCurrentInlineStyle(),
+      block
+      // editorState.getCurrentInlineStyle(),
     );
-    const result = EditorState.push(editorState, contentState, 'insert-characters');
+    const result = EditorState.push(editorState, contentState, 'insert-fragment');
     if (onChange) {
       onChange(result);
     }

@@ -31,14 +31,13 @@ export function EditorConvertToHTML (props) {
   let value = draftToHtml(convertToRaw(state.getCurrentContent()));
 
   const getStringBetween = (str, start, end) => {
-    const result = str.split('<body>')[1].split('</body>')[0];
+    const result = str.split(start)[1].split(end)[0];
     return result;
   }
   const openFile = useCallback((_, html) => {
     const contentBlock = htmlToDraft(getStringBetween(html, '<body>', '</body>'));
     if (contentBlock) {
       const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
-      console.log('contentBlock = ', contentBlock);
       const editorState = EditorState.createWithContent(contentState);
       setState(editorState);
     }
