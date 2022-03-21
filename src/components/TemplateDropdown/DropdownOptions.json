@@ -2,33 +2,83 @@
     "dropdownOptions": [
         {
             "key": "template1",
-            "value": "<h1><strong>Template 1</strong></h1>",
+            "value": "<h1>Template 1</h1>",
             "text": "Template 1"
         },
         {
             "key": "template2",
-            "value": "Template 2",
+            "value": "<strong>Template 2</strong>",
             "text": "Template 2"
         },
         {
             "key": "template3",
-            "value": "Template 3",
+            "value": "<em>Template 3</em>",
             "text": "Template 3"
         },
         {
             "key": "template4",
-            "value": "Template 4",
+            "value": "<ins>Template 4</ins>",
             "text": "Template 4"
         },
         {
             "key": "template5",
-            "value": "Template 5",
+            "value": "<del>Template 5</del>",
             "text": "Template 5"
         },
         {
             "key": "template6",
-            "value": "Template 6",
+            "value": "<code>Template 6</code>",
             "text": "Template 6"
+        },
+        {
+            "key": "template7",
+            "value": "<blockquote>Template 7</blockquote>",
+            "text": "Template 7"
+        },
+        {
+            "key": "template8",
+            "value": "<pre>Template 8</pre>",
+            "text": "Template 8"
+        },
+        {
+            "key": "template9",
+            "value": "<span style='font-family: Georgia;'>Template 9</span>",
+            "text": "Template 9"
+        },
+        {
+            "key": "template10",
+            "value": "<ul><li>Template 10</li></ul>",
+            "text": "Template 10"
+        },
+        {
+            "key": "template11",
+            "value": "<ol><li>Template 11</li></ol>",
+            "text": "Template 11"
+        },
+        {
+            "key": "template12",
+            "value": "<p style='text-align:center;'>Template 12</p>",
+            "text": "Template 12"
+        },
+        {
+            "key": "template13",
+            "value": "<p style='text-align:justify;'>Template 13</p>",
+            "text": "Template 13"
+        },
+        {
+            "key": "template14",
+            "value": "<p><span style='color: rgb(97,189,109);'>Template 14</span></p>",
+            "text": "Template 14"
+        },
+        {
+            "key": "template15",
+            "value": "<p><a href='http://google.com' target='_blank'>Template 15</a></p>",
+            "text": "Template 15"
+        },
+        {
+            "key": "template16",
+            "value": "<p style='text-align:left;'>Template 16</p>",
+            "text": "Template 16"
         }
     ]
 }
