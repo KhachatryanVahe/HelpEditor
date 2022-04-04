@@ -25,8 +25,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-dev": "concurrently \"npm start\" \"wait-on tcp:3001 && electron .\"",
-    "build-electron": "electron-builder --linux"
+    "electron:start": "concurrently \"npm start\" \"wait-on tcp:3001 && electron .\"",
+    "electron:build": "npm run build && electron-builder --win"
   },
   "main": "public/electron.js",
   "homepage": "./",
@@ -39,7 +39,8 @@
       "output": "release"
     },
     "win": {
-      "target": "portable"
+      "target": "portable",
+      "icon": "public/favicon.ico"
     },
     "linux": {
       "target": [
