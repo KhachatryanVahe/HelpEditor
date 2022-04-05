@@ -1,9 +1,9 @@
 const {
+    app,
     BrowserWindow,
     Menu,
     dialog
 } = require('electron')
-const path = require('path');
 const fs = require('fs');
 
 const template = [
@@ -11,22 +11,15 @@ const template = [
         label: 'File',
         submenu: [
             {
-                label: 'New File',
-                accelerator: 'CommandOrControl+N',
-                click() {
-                  mainWindow.createWindow();
-                }
-            },
-            {
                 label: 'Open File',
                 accelerator: 'CommandOrControl+O',
                 click() {
                     dialog.showOpenDialog({
-                        title : 'Open file',
-                        defaultPath: path.join(__dirname, '../assets'),
-                        buttonLabel : 'Open',
+                        title: 'Open file',
+                        defaultPath: app.getPath('documents'),
+                        buttonLabel: 'Open',
                         properties: ['openFile'],
-                        filters :[
+                        filters: [
                             {name: 'HTML files', extensions: ['html']},
                             {name: 'All Files', extensions: ['*']}
                         ]

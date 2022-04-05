@@ -75,8 +75,8 @@ const saveToHTML = (data) => {
 </html>
 `
   dialog.showSaveDialog({
-    title: 'Select the File Path to save',
-    defaultPath: path.join(__dirname, '../assets/sample.html'),
+    title: 'Save file',
+    defaultPath: app.getPath('documents'),
     buttonLabel: 'Save file',
     filters: [
       {name: 'HTML Files', extensions: ['html']},
