@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { EditorState, convertToRaw, ContentState } from 'draft-js';
+import { EditorState, ContentState, convertToRaw} from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';
@@ -23,12 +23,14 @@ const toolbar = {
 }
 
 export function EditorConvertToHTML (props) {
-  const [state, setState] = useState(EditorState.createEmpty());
+  const [editorState, setEditorState] = useState(EditorState.createEmpty());
 
   const onEditorStateChange = (editorState) => {
-    setState(editorState);
+    setEditorState(editorState);
   };
-  let value = draftToHtml(convertToRaw(state.getCurrentContent()));
+  let raw = convertToRaw(editorState.getCurrentContent())
+  console.log(JSON.stringify(raw));
+  let value = draftToHtml(raw);
 
   const getStringBetween = (str, start, end) => {
     const result = str.split(start)[1].split(end)[0];
@@ -39,7 +41,7 @@ export function EditorConvertToHTML (props) {
     if (contentBlock) {
       const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
       const editorState = EditorState.createWithContent(contentState);
-      setState(editorState);
+      setEditorState(editorState);
     }
   }, []);
 
@@ -61,7 +63,7 @@ export function EditorConvertToHTML (props) {
     <div className={'editor'}>
       <Editor
         toolbar={toolbar}
-        editorState={state}
+        editorState={editorState}
         wrapperClassName='wrapper-class'
         editorClassName='editor-class'
         toolbarClassName='toolbar-class'

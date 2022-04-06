@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import { EditorState, Modifier, ContentState} from 'draft-js';
-import htmlToDraft from 'html-to-draftjs';
+import { EditorState, convertFromRaw} from 'draft-js';
 import dropdownOption from "./DropdownOptions.json"
 import './TemplateDropdown.css'
 
@@ -8,18 +7,17 @@ const TemplateDropdown = ({onChange, editorState}) => {
   const [open, setOpen] = useState(false);
 
   const addTemplate = (template) => {
-    const block = ContentState.createFromBlockArray(htmlToDraft(template).contentBlocks).getBlockMap();
-    const pastedBlocks = ContentState.createFromText(template).blockMap;
-
-    console.log('block = ', block);
-    console.log('pastedBlocks = ', pastedBlocks);
-    const contentState = Modifier.replaceWithFragment(
-      editorState.getCurrentContent(),
-      editorState.getSelection(),
-      block
-      // editorState.getCurrentInlineStyle(),
-    );
-    const result = EditorState.push(editorState, contentState, 'insert-fragment');
+    const contentState = convertFromRaw(template);
+    console.log(contentState);
+    // const st = ContentState.createFromBlockArray(blocks, blocks.entityMap)
+    // const block = st.getBlockMap();
+    // const contentState = Modifier.replaceWithFragment(
+    //   editorState.getCurrentContent(),
+    //   editorState.getSelection(),
+    //   apendedContentState
+    // );
+    const result = EditorState.createWithContent(contentState)
+    // const result = EditorState.push(editorState, contentState, 'insert-fragment');
     if (onChange) {
       onChange(result);
     }
@@ -38,7 +36,7 @@ const TemplateDropdown = ({onChange, editorState}) => {
           {dropdownOptions.map(item => (
             <li
               onClick={() => addTemplate(item.value)}
-              key={item.value}
+              key={item.key}
               className="rdw-dropdownoption-default template-li"
             >
               {item.text}

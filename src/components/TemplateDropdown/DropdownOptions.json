@@ -2,83 +2,78 @@
     "dropdownOptions": [
         {
             "key": "template1",
-            "value": "<h1>Template 1</h1>",
-            "text": "Template 1"
+            "text": "Template 1",
+            "value": {"blocks":[{"key":"40ivt","text":"About The Project","type":"header-two","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"9v433","text":"There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"fn4c6","text":"Here's why:","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"eeq3s","text":"Your time should be focused on creating something amazing. A project that solves a problem and helps others","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"c8855","text":"You shouldn't be doing the same tasks over and over like creating a README from scratch","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"8lc7h","text":"You should implement DRY principles to the rest of your life","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"ejr0f","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"equi4","text":"Built With","type":"header-three","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"2j6sc","text":"This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"gajd","text":"Electron","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"ar6ug","text":"React.js","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"cmcuo","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"5vu0o","text":"Getting Started","type":"header-two","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"24g0t","text":"This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"bjij9","text":"Prerequisites","type":"header-three","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"8mmi","text":"This is an example of how to list things you need to use the software and how to install them.","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"8nh0v","text":"npm","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"aq03b","text":"npm install npm@latest -g","type":"code","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{"text-align":"left"}},{"key":"adq86","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"gh7j","text":"Installation","type":"header-three","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"agpta","text":"Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services.","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":165,"style":"ITALIC"}],"entityRanges":[],"data":{}},{"key":"f0osa","text":"Get a free API Key at https://example.com ","type":"ordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[{"offset":22,"length":19,"key":0}],"data":{}},{"key":"1ikfa","text":"Clone the repo  git clone https://github.com/your_username_/Project-Name.git","type":"ordered-list-item","depth":0,"inlineStyleRanges":[{"offset":16,"length":60,"style":"CODE"}],"entityRanges":[],"data":{}},{"key":"4v0la","text":"Install NPM packages  npm install","type":"ordered-list-item","depth":0,"inlineStyleRanges":[{"offset":22,"length":11,"style":"CODE"}],"entityRanges":[],"data":{}},{"key":"dasi1","text":"Enter your API in config.js","type":"ordered-list-item","depth":0,"inlineStyleRanges":[{"offset":18,"length":9,"style":"CODE"}],"entityRanges":[],"data":{}},{"key":"e619s","text":"const API_KEY = 'ENTER YOUR API';","type":"code","depth":0,"inlineStyleRanges":[{"offset":0,"length":33,"style":"CODE"}],"entityRanges":[],"data":{}},{"key":"m30c","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"gpg7","text":"Usage","type":"header-two","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"f5nfu","text":"Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. ","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"62oks","text":"You may also link to more resources. For more examples, please refer to the Documentation   ","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[{"offset":76,"length":13,"key":1}],"data":{}},{"key":"d7ld6","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"7uelh","text":"License","type":"header-two","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{"text-align":"start"}},{"key":"eof1l","text":"Distributed under the MIT License. See LICENSE.txt for more information.","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":39,"length":11,"style":"CODE"}],"entityRanges":[],"data":{}},{"key":"6rhb6","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"ak0sm","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"9mcfm","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"53tn1","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}],"entityMap":{"0":{"type":"LINK","mutability":"MUTABLE","data":{"url":"https://example.com","targetOption":"_self"}},"1":{"type":"LINK","mutability":"MUTABLE","data":{"url":"https://example.com","targetOption":"_self"}}}}
         },
         {
             "key": "template2",
-            "value": "<strong>Template 2</strong>",
-            "text": "Template 2"
+            "text": "Template 2",
+            "value": {"blocks":[{"key":"40ivt","text":"Project Title","type":"header-two","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"9v433","text":"Simple overview of use/purpose.","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"7vaoq","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"ejr0f","text":"Description","type":"header-two","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"6fcep","text":"An in-depth paragraph about your project and overview of use.","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"3l3tm","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"equi4","text":"Getting Started","type":"header-two","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"5re4c","text":"Dependencies","type":"header-three","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"3tq36","text":"Describe any prerequisites, libraries, OS version, etc., needed before installing program.","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"8jkom","text":"ex. Windows 10","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"1d7lo","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"cujbf","text":"Installing","type":"header-three","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"35ad8","text":"How/where to download your program","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"a0qt7","text":"Any modifications needed to be made to files/folders","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"4b1rn","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"dc8ti","text":"Executing program","type":"header-three","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"fhvap","text":"How to run the program","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"505to","text":"Step-by-step bullets","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"bcg03","text":"code blocks for commands","type":"code","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"2at1a","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"6q5l5","text":"Help","type":"header-two","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"aplis","text":"Any advise for common problems or issues.","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"fend9","text":"command to run if program contains helper info","type":"code","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"6r2o5","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"1m4oc","text":"Authors","type":"header-two","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"8923s","text":"Contributors names and contact info  ","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"d7ld6","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"7uelh","text":"License","type":"header-two","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{"text-align":"start"}},{"key":"eof1l","text":"This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"47vja","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"fsqmj","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}],"entityMap":{}}
         },
         {
             "key": "template3",
-            "value": "<em>Template 3</em>",
-            "text": "Template 3"
+            "text": "Template 3",
+            "value": {"blocks":[{"key":"9gu3d","text":"Template 3","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":10,"style":"ITALIC"}],"entityRanges":[],"data":{}}],"entityMap":{}}
         },
         {
             "key": "template4",
-            "value": "<ins>Template 4</ins>",
-            "text": "Template 4"
+            "text": "Template 4",
+            "value": {"blocks":[{"key":"9gu3d","text":"Template 4","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":10,"style":"UNDERLINE"}],"entityRanges":[],"data":{}}],"entityMap":{}}
         },
         {
             "key": "template5",
-            "value": "<del>Template 5</del>",
-            "text": "Template 5"
+            "text": "Template 5",
+            "value": {"blocks":[{"key":"9gu3d","text":"Template 5","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":10,"style":"STRIKETHROUGH"}],"entityRanges":[],"data":{}}],"entityMap":{}}
         },
         {
             "key": "template6",
-            "value": "<code>Template 6</code>",
-            "text": "Template 6"
+            "text": "Template 6",
+            "value": {"blocks":[{"key":"9gu3d","text":"Template 6","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":10,"style":"CODE"}],"entityRanges":[],"data":{}}],"entityMap":{}}
         },
         {
             "key": "template7",
-            "value": "<blockquote>Template 7</blockquote>",
-            "text": "Template 7"
+            "text": "Template 7",
+            "value": {"blocks":[{"key":"9gu3d","text":"Template 7","type":"blockquote","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}],"entityMap":{}}
         },
         {
             "key": "template8",
-            "value": "<pre>Template 8</pre>",
-            "text": "Template 8"
+            "text": "Template 8",
+            "value": {"blocks":[{"key":"9gu3d","text":"Template 8","type":"code","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}],"entityMap":{}}
         },
         {
             "key": "template9",
-            "value": "<span style='font-family: Georgia;'>Template 9</span>",
-            "text": "Template 9"
+            "text": "Template 9",
+            "value": {"blocks":[{"key":"9gu3d","text":"Template 9","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":10,"style":"fontfamily-Georgia"}],"entityRanges":[],"data":{}}],"entityMap":{}}
         },
         {
             "key": "template10",
-            "value": "<ul><li>Template 10</li></ul>",
-            "text": "Template 10"
+            "text": "Template 10",
+            "value": {"blocks":[{"key":"8lt5p","text":"Template 10","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}],"entityMap":{}}
         },
         {
             "key": "template11",
-            "value": "<ol><li>Template 11</li></ol>",
-            "text": "Template 11"
+            "text": "Template 11",
+            "value": {"blocks":[{"key":"8lt5p","text":"Template 11","type":"ordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}],"entityMap":{}}
         },
         {
             "key": "template12",
-            "value": "<p style='text-align:center;'>Template 12</p>",
-            "text": "Template 12"
+            "text": "Template 12",
+            "value": {"blocks":[{"key":"8lt5p","text":"Template 12","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{"text-align":"center"}}],"entityMap":{}}
         },
         {
             "key": "template13",
-            "value": "<p style='text-align:justify;'>Template 13</p>",
-            "text": "Template 13"
+            "text": "Template 13",
+            "value": {"blocks":[{"key":"8lt5p","text":"Template 13","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{"text-align":"right"}}],"entityMap":{}}
         },
         {
             "key": "template14",
-            "value": "<p><span style='color: rgb(97,189,109);'>Template 14</span></p>",
-            "text": "Template 14"
+            "text": "Template 14",
+            "value": {"blocks":[{"key":"8lt5p","text":"Template 14","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":11,"style":"color-rgb(226,80,65)"}],"entityRanges":[],"data":{}}],"entityMap":{}}
         },
         {
             "key": "template15",
-            "value": "<p><a href='http://google.com' target='_blank'>Template 15</a></p>",
-            "text": "Template 15"
-        },
-        {
-            "key": "template16",
-            "value": "<p style='text-align:left;'>Template 16</p>",
-            "text": "Template 16"
+            "text": "Template 15",
+            "value": {"blocks":[{"key":"8lt5p","text":"Template 15 ","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[{"offset":0,"length":11,"key":0}],"data":{}}],"entityMap":{"0":{"type":"LINK","mutability":"MUTABLE","data":{"url":"http://Google.com","targetOption":"_self"}}}}
         }
     ]
 }
