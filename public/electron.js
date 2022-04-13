@@ -21,7 +21,7 @@ function createWindow () {
       nodeIntegration: true,
       contextIsolation: false
     },
-    icon: __dirname + '\\favicon.ico'
+    icon: __dirname + '\\icon.ico'
   })
   let HOST = process.env.HOST || "localhost"
   let PORT = process.env.PORT || 3001

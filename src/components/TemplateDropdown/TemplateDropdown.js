@@ -9,15 +9,7 @@ const TemplateDropdown = ({onChange, editorState}) => {
   const addTemplate = (template) => {
     const contentState = convertFromRaw(template);
     console.log(contentState);
-    // const st = ContentState.createFromBlockArray(blocks, blocks.entityMap)
-    // const block = st.getBlockMap();
-    // const contentState = Modifier.replaceWithFragment(
-    //   editorState.getCurrentContent(),
-    //   editorState.getSelection(),
-    //   apendedContentState
-    // );
     const result = EditorState.createWithContent(contentState)
-    // const result = EditorState.push(editorState, contentState, 'insert-fragment');
     if (onChange) {
       onChange(result);
     }
