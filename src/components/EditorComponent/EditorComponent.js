@@ -29,7 +29,6 @@ export function EditorConvertToHTML (props) {
     setEditorState(editorState);
   };
   let raw = convertToRaw(editorState.getCurrentContent())
-  console.log(JSON.stringify(raw));
   let value = draftToHtml(raw);
 
   const getStringBetween = (str, start, end) => {

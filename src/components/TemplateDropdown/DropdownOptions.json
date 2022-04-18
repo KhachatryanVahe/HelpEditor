@@ -14,66 +14,6 @@
             "key": "template3",
             "text": "Template 3",
             "value": {"blocks":[{"key":"40ivt","text":"Foobar","type":"header-one","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"9v433","text":"Foobar is a Python library for dealing with word pluralization.","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"7vaoq","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"ejr0f","text":"Installation","type":"header-two","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"6fcep","text":"Use the package manager pip to install foobar.","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"2epdp","text":"pip install foobar","type":"code","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"c0o1g","text":"Usage","type":"header-two","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"3l3tm","text":"import foobar","type":"blockquote","depth":0,"inlineStyleRanges":[{"offset":0,"length":13,"style":"CODE"}],"entityRanges":[],"data":{}},{"key":"ai2k3","text":"# returns 'words'","type":"blockquote","depth":0,"inlineStyleRanges":[{"offset":0,"length":17,"style":"CODE"}],"entityRanges":[],"data":{}},{"key":"cuftl","text":"foobar.pluralize('word')","type":"blockquote","depth":0,"inlineStyleRanges":[{"offset":0,"length":24,"style":"CODE"}],"entityRanges":[],"data":{}},{"key":"354e","text":"# returns 'geese'","type":"blockquote","depth":0,"inlineStyleRanges":[{"offset":0,"length":17,"style":"CODE"}],"entityRanges":[],"data":{}},{"key":"98jb7","text":"foobar.pluralize('goose')","type":"blockquote","depth":0,"inlineStyleRanges":[{"offset":0,"length":25,"style":"CODE"}],"entityRanges":[],"data":{}},{"key":"9siqi","text":"# returns 'phenomenon'","type":"blockquote","depth":0,"inlineStyleRanges":[{"offset":0,"length":22,"style":"CODE"}],"entityRanges":[],"data":{}},{"key":"fibn8","text":"foobar.singularize('phenomena')","type":"blockquote","depth":0,"inlineStyleRanges":[{"offset":0,"length":31,"style":"CODE"}],"entityRanges":[],"data":{}},{"key":"11sp7","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"equi4","text":"Contributing","type":"header-two","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"54e7a","text":"Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"2mhl5","text":"Please make sure to update tests as appropriate.","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"8hun5","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"7uelh","text":"License","type":"header-two","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{"text-align":"start"}},{"key":"eof1l","text":"MIT ","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[{"offset":0,"length":3,"key":0}],"data":{}},{"key":"47vja","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}},{"key":"fsqmj","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}],"entityMap":{"0":{"type":"LINK","mutability":"MUTABLE","data":{"url":"https://choosealicense.com/licenses/mit/","targetOption":"_self"}}}}
-        },
-        {
-            "key": "template4",
-            "text": "Template 4",
-            "value": {"blocks":[{"key":"9gu3d","text":"Template 4","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":10,"style":"UNDERLINE"}],"entityRanges":[],"data":{}}],"entityMap":{}}
-        },
-        {
-            "key": "template5",
-            "text": "Template 5",
-            "value": {"blocks":[{"key":"9gu3d","text":"Template 5","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":10,"style":"STRIKETHROUGH"}],"entityRanges":[],"data":{}}],"entityMap":{}}
-        },
-        {
-            "key": "template6",
-            "text": "Template 6",
-            "value": {"blocks":[{"key":"9gu3d","text":"Template 6","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":10,"style":"CODE"}],"entityRanges":[],"data":{}}],"entityMap":{}}
-        },
-        {
-            "key": "template7",
-            "text": "Template 7",
-            "value": {"blocks":[{"key":"9gu3d","text":"Template 7","type":"blockquote","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}],"entityMap":{}}
-        },
-        {
-            "key": "template8",
-            "text": "Template 8",
-            "value": {"blocks":[{"key":"9gu3d","text":"Template 8","type":"code","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}],"entityMap":{}}
-        },
-        {
-            "key": "template9",
-            "text": "Template 9",
-            "value": {"blocks":[{"key":"9gu3d","text":"Template 9","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":10,"style":"fontfamily-Georgia"}],"entityRanges":[],"data":{}}],"entityMap":{}}
-        },
-        {
-            "key": "template10",
-            "text": "Template 10",
-            "value": {"blocks":[{"key":"8lt5p","text":"Template 10","type":"unordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}],"entityMap":{}}
-        },
-        {
-            "key": "template11",
-            "text": "Template 11",
-            "value": {"blocks":[{"key":"8lt5p","text":"Template 11","type":"ordered-list-item","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}],"entityMap":{}}
-        },
-        {
-            "key": "template12",
-            "text": "Template 12",
-            "value": {"blocks":[{"key":"8lt5p","text":"Template 12","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{"text-align":"center"}}],"entityMap":{}}
-        },
-        {
-            "key": "template13",
-            "text": "Template 13",
-            "value": {"blocks":[{"key":"8lt5p","text":"Template 13","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{"text-align":"right"}}],"entityMap":{}}
-        },
-        {
-            "key": "template14",
-            "text": "Template 14",
-            "value": {"blocks":[{"key":"8lt5p","text":"Template 14","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":11,"style":"color-rgb(226,80,65)"}],"entityRanges":[],"data":{}}],"entityMap":{}}
-        },
-        {
-            "key": "template15",
-            "text": "Template 15",
-            "value": {"blocks":[{"key":"8lt5p","text":"Template 15 ","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[{"offset":0,"length":11,"key":0}],"data":{}}],"entityMap":{"0":{"type":"LINK","mutability":"MUTABLE","data":{"url":"http://Google.com","targetOption":"_self"}}}}
         }
     ]
 }
