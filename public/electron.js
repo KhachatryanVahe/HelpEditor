@@ -38,6 +38,15 @@ ipcMain.on('save-file', (event, arg) => {
   saveToHTML(arg)
 })
 
+ipcMain.on('add-template', (event, arg) => {
+  let jsonPath = path.join(__dirname, '../src/components/TemplateDropdown/DropdownOptions.json')
+  fs.writeFile(jsonPath, JSON.stringify(arg), (err, result) => {  // WRITE
+    if (err) {
+        return console.error(err);
+    }
+  });
+})
+
 app.on('ready', () => {
   Menu.setApplicationMenu(menu);
   createWindow();

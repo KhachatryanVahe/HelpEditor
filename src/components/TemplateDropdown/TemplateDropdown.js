@@ -8,7 +8,6 @@ const TemplateDropdown = ({onChange, editorState}) => {
 
   const addTemplate = (template) => {
     const contentState = convertFromRaw(template);
-    console.log(contentState);
     const result = EditorState.createWithContent(contentState)
     if (onChange) {
       onChange(result);
@@ -31,7 +30,7 @@ const TemplateDropdown = ({onChange, editorState}) => {
               key={item.key}
               className="rdw-dropdownoption-default template-li"
             >
-              {item.text}
+              {item.label}
             </li>
           ))}
         </ul>

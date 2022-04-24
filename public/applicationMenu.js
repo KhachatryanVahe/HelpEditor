@@ -49,6 +49,14 @@ const template = [
                     focusedWindow.webContents.send('save-file')
                 }
             },
+            {
+                label: 'Add template',
+                accelerator: 'CommandOrControl+Shift+A',
+                click: () => {
+                    const focusedWindow = BrowserWindow.getFocusedWindow();
+                    focusedWindow.webContents.send('add-template')
+                }
+            },
             { role: 'quit' }
         ]
     },
