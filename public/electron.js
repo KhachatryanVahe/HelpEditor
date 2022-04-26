@@ -14,7 +14,7 @@ let mainWindow;
 
 function createWindow () {
   mainWindow = new BrowserWindow({
-    width: 1200,
+    width: 1300,
     height: 600,
     title:'Help editor',
     webPreferences: {
