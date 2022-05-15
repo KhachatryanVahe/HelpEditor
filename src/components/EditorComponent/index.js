@@ -3,11 +3,11 @@ import { EditorState, ContentState, convertToRaw} from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';
-import TemplateDropdown from '../TemplateDropdown/TemplateDropdown';
-import DefineButton from '../DefineButton/DefineButton';
+import TemplateDropdown from '../TemplateDropdown';
+import DefineButton from '../DefineButton';
 import dropdownOption from "../TemplateDropdown/DropdownOptions.json"
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-import './EditorComponent.css'
+import './style.css'
 
 const { ipcRenderer } = window.require('electron');
 
@@ -84,7 +84,7 @@ export function EditorConvertToHTML (props) {
         wrapperClassName='wrapper-class'
         editorClassName='editor-class'
         toolbarClassName='toolbar-class'
-        toolbarCustomButtons={[<TemplateDropdown/>, <DefineButton/>]}
+        toolbarCustomButtons={[<DefineButton/>, <TemplateDropdown/>]}
         onEditorStateChange={onEditorStateChange}
       />
       <textarea

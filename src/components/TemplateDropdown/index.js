@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { EditorState, convertFromRaw} from 'draft-js';
 import dropdownOption from "./DropdownOptions.json"
-import './TemplateDropdown.css'
+import './style.css'
 
 const TemplateDropdown = ({onChange, editorState}) => {
   const [open, setOpen] = useState(false);

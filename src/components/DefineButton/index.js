@@ -20,9 +20,9 @@ const DefineButton = ({onChange, editorState}) => {
         open?
         <div class="rdw-link-modal">
             <label class="rdw-link-modal-label" for="linkTitle">Define Title</label>
-            <input id="linkTitle" class="rdw-link-modal-input" name="linkTitle" value=""/>
+            <input id="linkTitle" class="rdw-link-modal-input" name="linkTitle" value="QUADRO_NAME_SPECIFIC"/>
             <label class="rdw-link-modal-label" for="linkTarget">Define string</label>
-            <input id="linkTarget" class="rdw-link-modal-input" name="linkTarget" value=""/>
+            <input id="linkTarget" class="rdw-link-modal-input" name="linkTarget" value="<b>QUADRO RTX A3000</b>"/>
             <span class="rdw-link-modal-buttonsection">
                 <button class="rdw-link-modal-btn" disabled="">Add</button>
                 <button class="rdw-link-modal-btn">Cancel</button>

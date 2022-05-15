@@ -1,4 +1,4 @@
-import { EditorConvertToHTML } from './components/EditorComponent/EditorComponent';
+import { EditorConvertToHTML } from './components/EditorComponent';
 import './App.css';
 
 
